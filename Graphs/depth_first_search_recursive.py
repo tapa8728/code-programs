@@ -41,8 +41,7 @@ class Graph(object):
 		for key in sorted(list(self.vertices.keys())):
 			print(key + str(self.vertices[key].neighbors) + "  " 
 						+ str(self.vertices[key].discovery) + "/" 
-						+ str(self.vertices[key].finish) + "--"
-						+ str(self.vertices[key].color))
+						+ str(self.vertices[key].finish))
 
 	## Add a vertex to the graph:
 	#  Check if vx is an object of type "Vertex"
@@ -90,13 +89,14 @@ a = Vertex('A')
 g.add_vertex(a)
 g.add_vertex(Vertex('B'))
 
-# automate the adding of vertex
-for i in range(ord('A'), ord('K')):
+for i in range(ord('A'), ord('D')):
 	g.add_vertex(Vertex(chr(i))) # add vertices from A --> J
 
-edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
+#edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
+edges = ['AB', 'BC', 'AC']
 for edge in edges:
 	g.add_edge(edge[:1], edge[1:])
+
 
 g.dfs(a)
 g.print_graph()
