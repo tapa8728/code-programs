@@ -30,15 +30,14 @@ class Graph(object):
 		print self.vertices
 		self.stack.append(startvx.name)
 		while self.stack: # while stack exists
-			print "Stack is -- ", self.stack
-			top = self.stack.pop()
-			if top not in self.visited:
-				self.visited.append(top)
-				print self.visited
-				for each in self.vertices[top]:
-					if each not in self.visited:
-						self.stack.append(each)
-			
+			top = self.stack.pop() 			# pop from stack
+			self.visited.append(top)		# mark visited
+			# Process_early stub here(for start time)
+			for each in self.vertices[top]:
+				if each not in self.visited:
+					# Process_edge stub here
+					self.stack.append(each)
+			# Process_late stub here
 
 g = Graph()
 a = Vertex('A')
@@ -46,7 +45,7 @@ a = Vertex('A')
 for i in range(ord('A'), ord('D')):
 	g.add_vertex(Vertex(chr(i))) # add vertices from A --> J
 
-#edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
+# edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
 edges = ['AB', 'BC', 'AC']
 for edge in edges:
 	g.add_edge(edge[:1], edge[1:])
