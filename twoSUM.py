@@ -13,18 +13,19 @@ return [0, 1].
 
 class Solution(object):
     def twoSum(self, nums, target):
-        ans = []
-        #print type(nums)
-        for each in nums:
-            val = target-each
-            if val in nums and val!=each:
-                ans.append(nums.index(each))
-                ans.append(nums.index(val))
-                print ans
-                break
+        dic = {}
+        for i in range(len(nums)):
+            if nums[i] in dic:
+                return [dic[nums[i]], i]
             else:
-                pass
-        return ans
+                dic[target - nums[i]] = i   
 
+
+'''  dictionry: store the difference of element with target as the key
+9-2 =   7   0
+9-11 = -2   2
+9-15 = -6   3
+
+'''
 s = Solution()
-print s.twoSum([0,3,2,4,0], 0)
+print s.twoSum([2, 7, 11, 15], 9)
