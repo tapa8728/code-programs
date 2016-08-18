@@ -75,24 +75,33 @@ class LinkedList(object):
 				curr = curr.next
 		return False
 
+	## Completely clear the LL
+	def clear(self):
+		self.__init__()
 
-lis = LinkedList()
-lis.printList()
-lis.insert(6)
-lis.printList()
-print "size -- ", lis.size()
-raw_input()
-lis.insert(3)
-lis.insert(4)
-lis.printList()	
-print "size -- ", lis.size()
-if lis.delete(9): 
-	print "9 deleted"
-else:
-	print "9 not found"
-lis.printList()
-if lis.delete(3): 
-	print "3 deleted"
-else:
-	print "3 not found"
-lis.printList()
+
+## MAIN function
+if __name__ == '__main__':
+	lis = LinkedList()
+	lis.printList()
+	lis.insert(6)
+	lis.printList()
+	print "size -- ", lis.size()
+	raw_input()
+	lis.insert(3)
+	lis.insert(4)
+	lis.printList()	
+	print "size -- ", lis.size()
+	if lis.delete(9): 
+		print "9 deleted"
+	else:
+		print "9 not found"
+	lis.printList()
+	if lis.delete(3): 
+		print "3 deleted"
+	else:
+		print "3 not found"
+	lis.printList()
+	print "lets clear out now .."
+	lis.clear()
+	lis.printList()
