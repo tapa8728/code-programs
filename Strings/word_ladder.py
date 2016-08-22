@@ -33,7 +33,7 @@ class Solution(object):
             for i in range(len(word)):
                 for c in 'abcdefghijklmnopqrstuvwxyz':
                     next_word = word[:i] + c + word[i+1:]   #change each letter of the start word sequentially - hit, sit, bit, cit ...
-                    print "pass {} -- next word -- {} ".format(i, next_word)
+                    #print "pass {} -- next word -- {} ".format(i, next_word)
                     if next_word in wordList:
                         wordList.remove(next_word)
                         queue.append([next_word, length + 1])

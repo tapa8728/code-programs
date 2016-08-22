@@ -58,7 +58,7 @@ class Tree(object):
 				node.right = Node(val)
 				print "Node with value {} has been added to the right of {}".format(val, node.value)
 
-
+	######################################################
 	def isBST(self):
 		if self.root == None:
 			print "Tree is empty"
