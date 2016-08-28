@@ -1,4 +1,5 @@
-lis = ['cat', 'banana', 'dog', 'nana', 'walk', 'catcatcatcatcatcat','walker', 'dogwalker', 'catdogwalkerbanana', 'dogdogwalkercatcat']
+lis = ['cat', 'banana', 'dog', 'nana', 'walk', 'catcatcatcatcatcat','walker', 'dogwalker', 'catdogwalkerbanana', 
+'dogdogwalkercatcat']
 dic={}
 for each in lis:
 	dic[each]={}

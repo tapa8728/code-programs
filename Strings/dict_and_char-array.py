@@ -1,6 +1,6 @@
 '''Given a dictionary of strings, and a char array.
 
-Find all entries in the dictionary in which all the strings chars can be found in the char array 
+Find all entries in the dictionary in which all the strings' chars can be found in the char array 
 
 Ex: char = ['a', 'b', 'm', 't', 'l', 'e', 'c']
 	dic = {"battle", "cattle", "men", "cow", "mmmmm", "hmmmm"}
